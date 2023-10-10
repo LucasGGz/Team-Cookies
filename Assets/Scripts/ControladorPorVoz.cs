@@ -12,15 +12,19 @@ public class ControladorPorVoz : MonoBehaviour
 
     Dictionary<string, Action> wordToAction;
 
+    public float fuerzaDeSalto = 6.0f; // Ajusta esta variable para controlar la altura del salto
+    private Rigidbody rb;
+
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         wordToAction = new Dictionary<string, Action>();
         wordToAction.Add("azul", Azul);
         wordToAction.Add("rojo", Rojo);
         wordToAction.Add("verde", Verde);
         wordToAction.Add("arriba", Arriba);
-        wordToAction.Add("abajo", Abajo);
+       // wordToAction.Add("abajo", Abajo);
         wordToAction.Add("derecha", Derecha);
         wordToAction.Add("izquierda", Izquierda);
 
@@ -37,7 +41,8 @@ public class ControladorPorVoz : MonoBehaviour
 
     private void Arriba()
     {
-        transform.Translate(0, 1, 0);
+        //  transform.Translate(0, 1, 0);
+        rb.AddForce(Vector3.up * fuerzaDeSalto, ForceMode.Impulse);
     }
 
     private void Abajo()
