@@ -25,8 +25,8 @@ public class ControladorPorVoz : MonoBehaviour
         wordToAction.Add("verde", Verde);
         wordToAction.Add("arriba", Arriba);
        // wordToAction.Add("abajo", Abajo);
-        wordToAction.Add("derecha", Derecha);
-        wordToAction.Add("izquierda", Izquierda);
+        wordToAction.Add("right", Derecha);
+        wordToAction.Add("left", Izquierda);
 
         keywordRecognizer = new KeywordRecognizer(wordToAction.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += WordRecognized;
