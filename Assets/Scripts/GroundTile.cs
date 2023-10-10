@@ -15,14 +15,15 @@ public class GroundTile : MonoBehaviour {
         Destroy(gameObject, 2);
     }
 
-    public GameObject obstaclePrefab;
+    public GameObject[] obstaclePrefabs;
 
     void SpawnObstacle()
     {
-        int obstacleSpawnIndex = Random.Range(2,5);
-        Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
+        int obstaclePrefabIndex = Random.Range(0, obstaclePrefabs.Length);
+    int obstacleSpawnIndex = Random.Range(2, 5);
+    Transform spawnPoint = transform.GetChild(obstacleSpawnIndex).transform;
 
-        Instantiate(obstaclePrefab, spawnPoint.position, Quaternion.identity, transform);
+    Instantiate(obstaclePrefabs[obstaclePrefabIndex], spawnPoint.position, Quaternion.identity, transform);
     }
 
   
