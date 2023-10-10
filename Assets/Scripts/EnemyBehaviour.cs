@@ -2,24 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class EnemyBehaviour : MonoBehaviour
 {
-    private float speed = 6f;
+    public ValorPoints valorPoints;
+    public float puntosQueda;
     void Start()
     {
-
+       valorPoints= FindObjectOfType<ValorPoints>();    
     }
 
     void Update()
     {
-        transform.Translate(0f, 0f, -speed * Time.deltaTime);
+      
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("barrera"))
+        if (other.gameObject.CompareTag("Player"))
         {
+            valorPoints.puntos += puntosQueda;
             Destroy(gameObject);
-            Debug.Log("si");
+           // Debug.Log("hay colision");
         }
     }
 }
