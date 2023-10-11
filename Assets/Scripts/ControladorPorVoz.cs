@@ -19,12 +19,8 @@ public class ControladorPorVoz : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        wordToAction = new Dictionary<string, Action>();
-        wordToAction.Add("azul", Azul);
-        wordToAction.Add("rojo", Rojo);
-        wordToAction.Add("verde", Verde);
+        wordToAction = new Dictionary<string, Action>();      
         wordToAction.Add("arriba", Arriba);
-       // wordToAction.Add("abajo", Abajo);
         wordToAction.Add("derecha", Derecha);
         wordToAction.Add("izquierda", Izquierda);
 
@@ -45,11 +41,6 @@ public class ControladorPorVoz : MonoBehaviour
         rb.AddForce(Vector3.up * fuerzaDeSalto, ForceMode.Impulse);
     }
 
-    private void Abajo()
-    {
-        transform.Translate(0, -1, 0);
-    }
-
      private void Derecha()
     {
         transform.Translate(3, 0, 0);
@@ -58,21 +49,6 @@ public class ControladorPorVoz : MonoBehaviour
      private void Izquierda()
     {
         transform.Translate(-3, 0, 0);
-    }
-
-    private void Verde()
-    {
-        GetComponent<Renderer>().material.SetColor("_Color", Color.green);
-    }
-
-    private void Rojo()
-    {
-        GetComponent<Renderer>().material.SetColor("_Color", Color.red);
-    }
-
-    private void Azul()
-    {
-        GetComponent<Renderer>().material.SetColor("_Color", Color.blue);
     }
 
 }

@@ -22,7 +22,7 @@ public class EnemyBehaviour : MonoBehaviour
         {
             valorPoints.puntos += puntosQueda;
             Destroy(gameObject);
-           // Debug.Log("hay colision");
+            Debug.Log("hay colision");
         }
     }
 }
