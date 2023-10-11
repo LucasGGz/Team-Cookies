@@ -15,7 +15,7 @@ public class ValorPoints : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textoPuntos.text = "Puntos "+puntos.ToString();
+        textoPuntos.text = ""+puntos.ToString();
 
         if (puntos == 2)
         {

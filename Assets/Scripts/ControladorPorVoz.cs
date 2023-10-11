@@ -52,12 +52,12 @@ public class ControladorPorVoz : MonoBehaviour
 
      private void Derecha()
     {
-        transform.Translate(2, 0, 0);
+        transform.Translate(3, 0, 0);
     }
 
      private void Izquierda()
     {
-        transform.Translate(-2, 0, 0);
+        transform.Translate(-3, 0, 0);
     }
 
     private void Verde()
