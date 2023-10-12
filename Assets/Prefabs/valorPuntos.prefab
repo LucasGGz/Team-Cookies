@@ -45,3 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puntos: 0
+  textoPuntos: {fileID: 8683562079005557715, guid: 83db27d34b58f0b4dbb1feffd06fe60a, type: 3}
+  youwintext: {fileID: 2761941012220846521, guid: 5960e673ee80b5944b27799af488076c, type: 3}
+  movimientoPersonaje: {fileID: 5009601231342202375, guid: 675c9fb62f744894baabbb4e1d931136, type: 3}
