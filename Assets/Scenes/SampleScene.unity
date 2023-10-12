@@ -612,7 +612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89ab898d0b4fe11468d2ffb1a77728a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundTile: {fileID: 7871019257450738380, guid: 117f8590548682547b22e3cf71ccd2b4, type: 3}
+  groundTile: {fileID: 5675839578779657743, guid: ce360c384a771e34b91c0eef3fed2a74, type: 3}
 --- !u!95 &6707028660427672881
 Animator:
   serializedVersion: 5
