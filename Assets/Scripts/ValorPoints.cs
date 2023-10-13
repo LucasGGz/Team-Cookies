@@ -26,7 +26,7 @@ public class ValorPoints : MonoBehaviour
     {
         textoPuntos.text = "" + puntos.ToString();
 
-        if (puntos == 1)
+        if (puntos == 6)
         {
             Debug.Log("Ganaste");
             youwintext.SetActive(true);
